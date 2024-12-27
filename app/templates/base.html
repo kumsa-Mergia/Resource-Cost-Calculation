@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Dashboard{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="{{ url_for('static', filename='file/images.png') }}" alt="Coopbank Logo" class="logo-c">
+            <ul class="nav-links">
+                <!-- Corrected link to home route -->
+                <li><a href="/">Home</a></li>
+                <!-- Corrected link to price_calculator route -->
+                <li><a href="/price">Price</a></li>
+
+            </ul>
+            <div class="nav-search">
+                <input type="text" id="searchBar" placeholder="Search..." class="search-input">
+                <button class="search-btn" onclick="performSearch()">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content area where child templates will inject content -->
+        {% block content %}{% endblock %}
+
+    <!-- Footer (optional, you can add more shared elements) -->
+    <footer class="footer">
+        <p>All Right Reserved &copy; <span id="year"></span> Cooperative Bank of Oromia. All Right Reserved</p>
+    </footer>
+</body>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</html>

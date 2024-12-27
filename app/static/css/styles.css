@@ -1,0 +1,388 @@
+:root {
+    --cyan-blue: #00adef;
+    --orange: #FFA500;
+    --black: #000000;
+  
+  }
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.this {
+    display: grid;
+}
+.card-content a {
+    margin: center;
+}
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    background-color: var(--cyan-blue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* box-shadow: 0 2px 5px var(--black); */
+}
+
+.navbar-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.navbar-container .nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 5px;
+
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-right: 60px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #555; /* Darker shade on hover */
+}
+
+/* search style for  */
+.nav-search {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    
+}
+
+.search-btn {
+    padding: 8px 12px;
+    margin-left: 10px;
+    background-color: var(--black);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: var(--orange);
+}
+
+/* hover drop down for sub process */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Align below the parent link */
+    left: 0;
+    background-color: #fff; /* White background for dropdown */
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    display: none; /* Initially hidden */
+    /* box-shadow: 0 2px 5px var(--black); */
+    border-radius: 5px;
+    z-index: 1001;
+    min-width: 400px; /* Set a minimum width */
+    width: auto; /* Allow the width to adjust based on content */
+}
+
+.dropdown-menu li {
+    padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: var(--cyan-blue);
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    color: var(--cyan-blue); /* Darker blue on hover */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.enviroment {
+    margin:  120px auto 10px;
+    max-width: 1200px;
+    align-items: center;
+    padding: 0px;
+    color: var(--black)
+}
+.enviroment h1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+/* card styles*/
+
+.card-container {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+    gap: 25px; /* Add space between the cards */
+    margin: 40px auto; /* 150px top margin, auto for left and right*/
+    max-width: 1200px; /* Limit container width to fit 3 cards */
+    align-items: center;
+    padding: 20px 10px;
+}
+
+
+.card {
+    width: 100%; /* Card will stretch to fit the grid column */
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    /* box-shadow: 0px 5px 10px var(--black); */
+    cursor: pointer;
+}
+
+.card-content {
+    padding: 30px;
+    line-height: 1.3;
+}
+
+.card-content h1 {
+    font-size: 23px;
+    margin-bottom: 10px;
+    color: var(--black);
+}
+
+.card-content ul {
+    list-style: none; /* Remove default list bullets */
+    padding: 0; /* Remove default padding */
+    margin: 10px 0 20px 0; /* Adjust margins */
+}
+
+.card-content ul li {
+    font-size: 17px; /* Font size for list items */
+    color: #444; /* Text color for list items */
+    line-height: 1.5; /* Spacing between lines */
+}
+
+
+.card-content .read-more {
+    font-size: 17px;
+    text-decoration: none;
+    color: var(--orange);
+    font-weight: bold;
+}
+.card-content .material-icons {
+    display: block; /* Display the icon in its own line */
+    font-size: 100px; /* Increase the font size to make the icon larger */
+    color: #555; /* Optional: Set the icon color */
+    margin: 10px auto; /* Center the icon and add some spacing */
+    text-align: center; /* Ensure the icon is centered */
+    color: var(--cyan-blue);
+}
+.card-content .material-icons:hover {
+    color: #e0222e; /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon */
+    transition: transform 0.3s, color 0.3s; /* Smooth animation */
+}
+.ibm-icon {
+    fill: var(--cyan-blue); /* Set the icon's color (example: blue) */
+    width: 85px;
+    height: 85px;
+    margin: 15px auto;
+    display: block;
+}
+.vmware-icon {
+    fill: var(--cyan-blue); /* Set the icon's color (example: blue) */
+    width: 65px;
+    height: 65px;
+    margin: 15px auto;
+    display: block;
+}
+.vmware-icon {
+    color: #e0222e; /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon */
+    transition: transform 0.3s, color 0.3s; /* Smooth animation */
+}
+.nutanix-icon {
+    fill: var(--cyan-blue); /* Set the icon's color (example: blue) */
+    width: 80px;
+    height: 80px;
+    margin: 15px auto;
+    display: block;
+}
+ /* price calculator  */
+.container {
+    max-width: 500px;
+    margin: 157px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 100px;
+    padding-top: 30px;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.container h1 {
+    text-align: center;
+    color: #333;
+    padding-top: 10px;
+    margin-bottom: 35px;
+}
+
+form {
+    display: grid;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Style for input fields */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style for the select dropdown */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--cyan-blue);
+    box-shadow: 0 0 5px var(--orange);
+}
+
+/* Style for the calculate button */
+.calculate-btn {
+    padding: 15px;
+    background-color: var(--cyan-blue);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.calculate-btn:hover {
+    background-color: var(--cyan-blue);
+}
+
+/* Style for the price display */
+.price-display {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #555;
+    text-align: center;
+}
+.logo-c {
+    width: 120px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 0px;
+    z-index: -2;
+}
+
+/*  Table  */
+/* Basic table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for table headers */
+th {
+    background-color: var(--cyan-blue);
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 18px;
+}
+/* Styling for table rows */
+td {
+    padding: 7px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Zebra striping for rows */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect for rows */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling for the first column (labels) */
+td:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Styling for the table container */
+.table {
+    margin: 7px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-table p{
+    color: rgb(85, 85, 85);
+    text-align: center;
+}
+.card-table h1 {
+    color: var(--orange);
+    text-align: center;
+}
+/*Footer Section */
+
+.footer {
+    color: rgb(85, 85, 85);
+    text-align: center;
+    padding: 150px 0;
+}
+
+    
+
+
+
