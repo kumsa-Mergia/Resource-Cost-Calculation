@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block title %}Core Banking and Enterprise System{% endblock %}
+
+{% block content %} 
+<div class="enviroment">
+    <h1></h1>
+</div>
+    <!-- Dashboard Content -->
+    <div class="dashboard-container">
+   
+        
+        <!-- Card Container for IBM, HCI, and VMware -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-content">
+                    <h1>IBM</h1>
+                    <img src="{{ url_for('static', filename='file/ibm.svg') }}" alt="VMware Download" class="ibm-icon">
+                    <div class="card-table">
+                        
+                        <h1>Total Resource Usage</h1>
+                        <table class="table">
+                            <tr class="Resource">
+                                <th></th>
+                                <th>Memory</th>
+                                <th>Cpu</th>
+                                <th>Storage</th>
+                                
+                            </tr>
+                            <tr>
+                                <td>usage</td>
+                                <td>300 GB </td>
+                                <td>150 GB</td>
+                                <td>22 TB</td>
+                            </tr>
+                            <tr>
+                                <td>price</td>
+                                <td>7000 $ </td>
+                                <td>6500 $</td>
+                                <td>9500 $</td>
+                            </tr>
+                        </table><br>
+                        <p>Total Price: 23000 $</p>
+                    </div>
+                    <!--End -->
+                    <a href="/ibm" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-content">
+                    <h1>HCI</h1>
+                    <img src="{{ url_for('static', filename='file/nutanix.svg') }}"  alt="VMware Download" class="nutanix-icon">
+                    <div class="card-table">
+                        <h1>Total Resource Usage</h1>
+                        <table class="table">
+                            <tr class="Resource">
+                                <th></th>
+                                <th>Memory</th>
+                                <th>Cpu</th>
+                                <th>Storage</th>
+                                
+                            </tr>
+                            <tr>
+                                <td>usage</td>
+                                <td>300 GB </td>
+                                <td>150 GB</td>
+                                <td>22 TB</td>
+                            </tr>
+                            <tr>
+                                <td>price</td>
+                                <td>7000 $ </td>
+                                <td>6500 $</td>
+                                <td>9500 $</td>
+                            </tr>
+                        </table><br>
+                        <p>Total Price: 23000 $</p>
+                    </div>
+                    <!--End -->
+                    <a href="/nutanix" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h1>VMware</h1>
+                    <!-- VMware Download Icon (Image) -->
+                    <img src="{{ url_for('static', filename='file/vmware.svg') }}" alt="VMware Download" class="vmware-icon">
+
+                    <div class="card-table">
+                        <h1>Total Resource Usage</h1>
+                        <table class="table">
+                            <tr class="Resource">
+                                <th></th>
+                                <th>Memory</th>
+                                <th>Cpu</th>
+                                <th>Storage</th>
+                                
+                            </tr>
+                            <tr>
+                                <td>usage</td>
+                                <td>300 GB </td>
+                                <td>150 GB</td>
+                                <td>22 TB</td>
+                            </tr>
+                            <tr>
+                                <td>price</td>
+                                <td>7000 $ </td>
+                                <td>6500 $</td>
+                                <td>9500 $</td>
+                            </tr>
+                        </table><br>
+                        <p>Total Price: 23000 $</p>
+                    </div>
+                    <!--End -->
+                    <a href="/vmware" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

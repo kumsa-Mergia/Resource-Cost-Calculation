@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block title %}IBM Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="enviroment">
+    <h1>IBM Environment</h1>
+</div>
+
+  <!-- IBM,HCI,VMWARE Dashboard Cards -->
+  <div class="card-container">
+    <div class="card">
+      <div class="card-content">
+        <h1>Production</h1>
+        <span class="material-icons">settings</span>
+        <div class="card-table">
+          <h1>Total Resource Usage</h1>
+          <table class="table">
+            <tr class="Resource">
+              <th></th>
+              <th>Memory</th>
+              <th>Cpu</th>
+              <th>Storage</th>
+            </tr>
+            <tr>
+              <td>usage</td>
+              <td>300 GB</td>
+              <td>150 GB</td>
+              <td>22 TB</td>
+            </tr>
+            <tr>
+              <td>price</td>
+              <td>7000 $</td>
+              <td>6500 $</td>
+              <td>9500 $</td>
+            </tr>
+          </table>
+          <br />
+          <p>Total Price: 23000 $</p>
+        </div>
+        <!--End -->
+        <a href="#" class="read-more">Get List</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h1>Development</h1>
+        <span class="material-icons">developer_mode</span>
+        <div class="card-table">
+          <h1>Total Resource Usage</h1>
+          <table class="table">
+            <tr class="Resource">
+              <th></th>
+              <th>Memory</th>
+              <th>Cpu</th>
+              <th>Storage</th>
+            </tr>
+            <tr>
+              <td>usage</td>
+              <td>300 GB</td>
+              <td>150 GB</td>
+              <td>22 TB</td>
+            </tr>
+            <tr>
+              <td>price</td>
+              <td>7000 $</td>
+              <td>6500 $</td>
+              <td>9500 $</td>
+            </tr>
+          </table>
+          <br />
+          <p>Total Price: 23000 $</p>
+        </div>
+        <!--End -->
+        <a href="#" class="read-more">Get List</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h1>Test/UAT</h1>
+        <span class="material-icons">bug_report</span>
+        <div class="card-table">
+          <h1>Total Resource Usage</h1>
+          <table class="table">
+            <tr class="Resource">
+              <th></th>
+              <th>Memory</th>
+              <th>Cpu</th>
+              <th>Storage</th>
+            </tr>
+            <tr>
+              <td>usage</td>
+              <td>300 GB</td>
+              <td>150 GB</td>
+              <td>229 TB</td>
+            </tr>
+            <tr>
+              <td>price</td>
+              <td>7000 $</td>
+              <td>6500 $</td>
+              <td>9500 $</td>
+            </tr>
+          </table>
+          <br />
+          <p>Total Price: 23000 $</p>
+        </div>
+        <!--End -->
+        <a href="#" class="read-more">Get List</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

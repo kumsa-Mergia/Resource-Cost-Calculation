@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Price Calculator{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Price Calculator</h1>
+    <form id="priceForm">
+        <div>
+            <label for="environment">Environment:</label>
+            <select id="environment" name="environment" required>
+                <option value="" disabled selected>Select an environment</option>
+                <option value="IBM">IBM</option>
+                <option value="HCI">HCI</option>
+                <option value="VMware">VMware</option>
+            </select>
+        </div>
+        <div>
+            <label for="cpu">Quantity:</label>
+            <input type="number" id="cpu" name="cpu" required min="1">
+        </div>
+
+        <div>
+            <label for="cpu">CPU (/core):</label>
+            <input type="number" id="cpu" name="cpu" required min="1">
+        </div>
+        <div>
+            <label for="ram">RAM (in GB):</label>
+            <input type="number" id="ram" name="ram" required min="1">
+        </div>
+        <div>
+            <label for="storage">Storage (in GB):</label>
+            <input type="number" id="storage" name="storage" required min="1">
+        </div>
+        <div>
+            <button type="button" class="calculate-btn" onclick="calculatePrice()">Calculate Price</button>
+        </div>
+    </form> 
+    <div id="priceDisplay" class="price-display"></div>
+</div>
+
+<script>
+    async function calculatePrice() {
+        const cpu = document.getElementById('cpu').value;
+        const ram = document.getElementById('ram').value;
+        const storage = document.getElementById('storage').value;
+
+        const response = await fetch('/calculate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ cpu, ram, storage }),
+        });
+
+        const data = await response.json();
+        document.getElementById('priceDisplay').innerText = `Total Price: $${data.total_price}`;
+    }
+</script>
+{% endblock %}

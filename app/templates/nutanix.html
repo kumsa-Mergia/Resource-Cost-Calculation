@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Nutanix Dashboard{% endblock %}
+
+{% block content %}
+    <!-- Nutanix Dashboard Cards -->
+    <div class="card-container">
+        <div class="card">
+            <div class="card-content">
+                <h1>Production</h1>
+                <span class="material-icons">settings</span>
+                <ul>
+                    <li>CPU: Intel Xeon</li>
+                    <li>RAM: 64GB</li>
+                    <li>Storage: 2TB SSD</li>
+                    <li>Price: $4000</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h1>Development</h1>
+                <span class="material-icons">developer_mode</span>
+                <ul>
+                    <li>CPU: AMD Ryzen 7</li>
+                    <li>RAM: 32GB</li>
+                    <li>Storage: 1TB SSD</li>
+                    <li>Price: $2500</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h1>Test/UAT</h1>
+                <span class="material-icons">bug_report</span>
+                <ul>
+                    <li>CPU: Intel i7</li>
+                    <li>RAM: 16GB</li>
+                    <li>Storage: 512GB SSD</li>
+                    <li>Price: $1500</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
